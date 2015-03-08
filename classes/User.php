@@ -67,7 +67,7 @@ class User implements iUser {
       $this->SysMessage->set("Пароли должны совпадать");
     }
     else {
-      $this->SignInProcess($username, $password);
+      $this->SignInProcess($username, _hash($password));
     }
   }
 
